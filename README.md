@@ -270,15 +270,13 @@ cd n8n-nodes-random && npm run build
 ### Arquitetura do Sistema
 - **Frontend:** Interface web do n8n (Vue.js)
 - **Backend:** n8n Core (Node.js)
-- **Banco de Dados:** PostgreSQL 14
+- **Banco de Dados:** PostgreSQL
 - **API Externa:** Random.org REST API
 - **Containerização:** Docker + Docker Compose
 
 ### Desenvolvimento do Conector
 - **Linguagem:** TypeScript
 - **Framework:** n8n Node API v1
-- **Build Tool:** TypeScript Compiler + Gulp
-- **Linting:** ESLint com regras específicas do n8n
 
 ### Estrutura do Nó Customizado
 ```typescript
@@ -293,8 +291,3 @@ cd n8n-nodes-random && npm run build
 - `postgres_data` - Dados persistentes do PostgreSQL
 - `n8n_data` - Dados do n8n (workflows, configurações)
 - `~/.n8n/custom` - Nós customizados (montado do host)
-
-### Segurança
-- Credenciais do banco em texto plano (apenas para desenvolvimento)
-- API Random.org não requer autenticação
-- n8n roda em modo desenvolvimento (N8N_DEV_MODE=true)
